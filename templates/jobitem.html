@@ -9,8 +9,11 @@
       <b>Salary:</b> {{job['salary']}}
     </div>
     {% endif %}
+    <div>
+      <b>Work Shift:</b> {{job['work shift']}}
+    </div>
   </div>
   <div class="col-3">
-    <button type="button" class="btn btn-outline-primary">Apply</button>
+    <a href="mailto:diamongkrisatalgem@gmail.com?subject=Bossilog%20Application%20for%{{job['title']}}&body=My%20name%3A%20%3Cfull%20name%3A%20FN%2C%20MI%2C%20LN%3E%0D%0AResume%3A" type = "button" class = "btn btn-outline-primary float-right align middle">Apply</a>
   </div>
 </div>
