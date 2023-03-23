@@ -6,25 +6,25 @@ JOBS = [
   {
     'id': 1,
     'title': "Cashier",
-    'location': "Filinvest 1, Road",
+    'location': "Filinvest 1, Road, Batasan Hills, Quezon City",
     'salary': 'Php 600 per day'
   },
   {
     'id': 2,
     'title': "Cook",
-    'location': "Filinvest 1, Road",
+    'location': "Filinvest 1, Road, Batasan Hills, Quezon City",
     'salary': 'Php 700 per day'
   },
   {
     'id': 3,
     'title': "Inventory Manager",
-    'location': "Filinvest 1, Road",
+    'location': "Filinvest 1 Road, Batasan Hills, Quezon City",
     'salary': 'Php 650 per day'
   },
   {
     'id': 4,
     'title': "Admin",
-    'location': "Filinvest 1, Road",
+    'location': "Visayas Street, Batasan Hills, Quezon City",
     'salary': 'Php 750 per day'
   }
 ]
