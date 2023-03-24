@@ -26,3 +26,32 @@ def load_jobs_from_db():
       job_dict.append(dict(zip(column_names, row)))
   
     return job_dict
+    
+"""def load_job_from_db(id):
+  with engine.connect() as conn:
+    result_job = conn.execute(
+      text("select * from jobs where id = :val").bindparams(val=id))
+    row = result_job.all()
+    row_key = result_job.keys()
+
+    if row is None:
+      return None
+    else:
+      row_dict = dict(zip(row_key[0], row[0]))
+      return row_dict"""
+
+def load_job_from_db(id):
+    with engine.connect() as conn:
+        result_job = conn.execute(
+            text("SELECT * FROM jobs WHERE id = :id").bindparams(id=id)
+        )
+        row = result_job.all()
+        row_key = result_job.keys()
+
+        if len(row) == 0:
+            return None
+        else:
+            print(dict(zip(row_key, row)))
+            return dict(zip(row_key, row))
+          
+
