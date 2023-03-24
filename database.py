@@ -2,7 +2,7 @@ from sqlalchemy import create_engine,text
 import os
 
 
-db_connection = os.environ['db_freecodecamp_tutortial_key_string']
+db_connection = "pscale_pw_yhPz4gS8cWglL6KjUgSYiYVPXWMDgSedi57EcJ7Qtzi"
 
 
 engine = create_engine(
