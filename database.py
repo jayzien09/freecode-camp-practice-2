@@ -53,5 +53,22 @@ def load_job_from_db(id):
       return job_dicts[0]
 
 
-#load_jobs_from_db()
-#oad_job_from_db(1)
+def add_application_to_db(job_id, data):
+  job_id = job_id.replace("[", "").replace("]", "")
+  with engine.connect() as conn:
+    query = text(
+      "INSERT INTO applications (job_id, full_name, email, linkedIn_url, education, experience, resume_url) VALUES(:job_id, :full_name, :email, :linkedIn_url, :education, :experience, :resume_url)"
+    )
+
+    conn.execute(
+      query,
+      {
+        "job_id": int(job_id),
+        "full_name": data["full_name"],
+        "email": data["email"],
+        "linkedIn_url": data["linkedIn_url"],
+        "education": data["education"],
+        "experience": data["experience"],
+        "resume_url": data["resume_url"],
+      },
+    )
